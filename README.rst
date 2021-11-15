@@ -53,6 +53,32 @@ is used for rounded edges and living hinges.
 | .. image:: static/samples/AgricolaInsert.jpg | .. image:: static/samples/HeartBox.jpg       | .. image:: static/samples/Atreus21.jpg       |
 +----------------------------------------------+----------------------------------------------+----------------------------------------------+
 
+Install inkscape extension
+-------------
+Boxes.py can be installed as an inkscape extension so you can generate awesome boxes locally without an
+internet connection and easily adapt your designs directly in inkscape.
+NOTE: The installation process is currently only tested on Debian systems, Windows and OSX not tested yet.
+First build and install the boxes.py binary systemwide by running:
+```
+sudo python3 setup.py install
+```
+Once this is done run the following to install the inkscape extension;
+if you wish to install the inkscape extension locally (so that you can also use it with the latest inkscape AppImage version), then use the installation path like:
+```~/.config/inkscape/extensions```.
+If you want to install it globally and only use the regular inkscape "system" installation, use the path which you get by running:
+```inkscape -x``` e.g. _/usr/share/inkscape/extensions_.
+
+So finally run in the _boxes_ root folder:
+```
+# for local installation
+python3 scripts/boxes2inkscape ~/.config/inkscape/extensions
+# for global installation
+sudo python3 scripts/boxes2inkscape /usr/share/inkscape/extensions
+```
+That's it. Now you should find new menu entries in inkscape under **Extensions > Boxes.py > ...***
+
+
+
 Documentation
 -------------
 
